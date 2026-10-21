@@ -140,6 +140,24 @@
     .media .thumbs img { width: 84px; }
   }
 
+
+  /* 상품 카드 */
+  .more { margin-top: 120px; }
+  .more h3.sub-h { font-family: var(--serif); font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin: 10px 0 28px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .pcard { background: var(--bg); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: transform .25s, box-shadow .25s; }
+  .pcard:hover, .pcard.reveal.on:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -28px rgba(29,38,27,.45); }
+  .pcard img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+  .pcard .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .pcard .org { font-size: 12.5px; color: var(--soft); }
+  .pcard h4 { font-family: var(--serif); font-size: 19px; margin: 0; letter-spacing: -0.02em; line-height: 1.4; }
+  .pcard ul { list-style: none; padding: 0; margin: 4px 0 0; font-size: 13.5px; color: var(--soft); }
+  .pcard ul li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; }
+  .pcard ul li b { color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .pcard .go { margin-top: auto; padding-top: 12px; font-weight: 700; font-size: 14px; color: var(--forest); }
+  @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .grid { gap: 12px; } .pcard .body { padding: 14px; } .pcard h4 { font-size: 16.5px; } .pcard ul { font-size: 12.5px; } }
+
   /* 먹는 법 */
   .howto { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .card { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 30px; }
@@ -199,6 +217,7 @@
     <a class="logo" href="#">후니스<i>.</i></a>
     <nav>
       <a href="#products">제철 상품</a>
+      <a href="#more">전체 상품</a>
       <a href="#howto">먹는 법</a>
       <a href="#guide">배송·교환</a>
       <a class="nav-cta" href="https://smartstore.naver.com/hoonytoo" target="_blank" rel="noopener">스토어 ↗</a>
@@ -228,8 +247,8 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="track">
-      <span>제주 극조생귤 10kg</span><span>충남 햇밤 3kg</span><span>경북 홍로사과 3kg</span><span>전 상품 무료배송</span><span>네이버페이 결제</span><span>있는 그대로 적는 상품 안내</span>
-      <span>제주 극조생귤 10kg</span><span>충남 햇밤 3kg</span><span>경북 홍로사과 3kg</span><span>전 상품 무료배송</span><span>네이버페이 결제</span><span>있는 그대로 적는 상품 안내</span>
+      <span>제주 극조생귤 10kg</span><span>충남 햇밤 3kg</span><span>경북 홍로사과 3kg</span><span>골드키위</span><span>루비에스 미니사과</span><span>수미감자</span><span>국내산 깐마늘</span><span>전 상품 무료배송</span><span>네이버페이 결제</span><span>있는 그대로 적는 상품 안내</span>
+      <span>제주 극조생귤 10kg</span><span>충남 햇밤 3kg</span><span>경북 홍로사과 3kg</span><span>골드키위</span><span>루비에스 미니사과</span><span>수미감자</span><span>국내산 깐마늘</span><span>전 상품 무료배송</span><span>네이버페이 결제</span><span>있는 그대로 적는 상품 안내</span>
     </div>
   </div>
 
@@ -345,6 +364,30 @@
           <a class="btn btn-dark" href="https://smartstore.naver.com/hoonytoo/products/13824972943" target="_blank" rel="noopener">스마트스토어에서 구매하기 ↗</a>
         </div>
       </article>
+
+      <div class="more" id="more">
+        <span class="eyebrow">More Picks</span>
+        <h3 class="sub-h">함께 고르기 좋은 상품</h3>
+        <div class="grid">
+          <a class="pcard reveal" href="https://smartstore.naver.com/hoonytoo/products/13824986032" target="_blank" rel="noopener">
+            <img src="img/kiwi.jpg" alt="숟가락으로 뜬 골드키위 단면" width="800" height="800" loading="lazy">
+            <div class="body"><span class="org">원산지 뉴질랜드</span><h4>제스프리 골드키위</h4><ul><li><span>대과 15과</span><b>17,900원</b></li><li><span>대과 25과</span><b>24,900원</b></li><li><span>점보 15과</span><b>26,800원</b></li></ul><span class="go">스토어에서 보기 ↗</span></div>
+          </a>
+          <a class="pcard reveal" href="https://smartstore.naver.com/hoonytoo/products/13824986199" target="_blank" rel="noopener">
+            <img src="img/miniapple.jpg" alt="한 입 베어 문 루비에스 미니사과" width="800" height="800" loading="lazy">
+            <div class="body"><span class="org">원산지 국산(경상북도)</span><h4>루비에스 미니사과</h4><ul><li><span>혼합과 1kg</span><b>9,900원</b></li><li><span>혼합과 2kg</span><b>15,900원</b></li></ul><span class="go">스토어에서 보기 ↗</span></div>
+          </a>
+          <a class="pcard reveal" href="https://smartstore.naver.com/hoonytoo/products/13824986385" target="_blank" rel="noopener">
+            <img src="img/potato.jpg" alt="수미감자" width="800" height="800" loading="lazy">
+            <div class="body"><span class="org">원산지 국산 · 2026년산</span><h4>수미감자 5kg</h4><ul><li><span>대 (60~100g)</span><b>12,900원</b></li><li><span>왕특 (150~250g)</span><b>15,900원</b></li></ul><span class="go">스토어에서 보기 ↗</span></div>
+          </a>
+          <a class="pcard reveal" href="https://smartstore.naver.com/hoonytoo/products/13824986581" target="_blank" rel="noopener">
+            <img src="img/garlic.jpg" alt="껍질을 벗긴 깐마늘" width="800" height="800" loading="lazy">
+            <div class="body"><span class="org">원산지 국산</span><h4>국내산 깐마늘 1kg</h4><ul><li><span>깐마늘 1kg</span><b>16,900원</b></li></ul><span class="go">스토어에서 보기 ↗</span></div>
+          </a>
+        </div>
+        <p class="fine" style="margin-top:18px">모두 무료배송 · 제주·도서산간 배송 불가 · 2026년 10월 기준 가격이며, 최종 가격은 스토어에서 확인해 주세요.</p>
+      </div>
     </div>
   </section>
 
